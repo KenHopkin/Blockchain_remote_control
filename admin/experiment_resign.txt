@@ -1,0 +1,4 @@
+delete device number 2, cost time:0:00:09.296312秒 
+each is 0:00:04.648156
+delete device number 50, cost time:0:03:58.184980秒 
+each is 0:00:04.763700

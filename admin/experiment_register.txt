@@ -1,0 +1,4 @@
+add device number 4, cost time:0:00:29.310236秒 
+each is 0:00:07.327559
+add device number 50, cost time:0:06:09.098313秒 
+each is 0:00:07.381966

@@ -1,0 +1,110 @@
+# from module import node_module
+import copy
+import json
+
+from web3 import Web3
+import datetime
+import node_module
+import argparse
+import os
+
+# massage  sender
+
+
+
+
+dev_ip = 'http://127.0.0.1:8545'
+dev_id = ['admin00','ship00','ship01','ship02','ship03','ship04','ship05','ship06','ship07','ship08','ship09','ship10','ship11','ship12','ship13','ship14','ship15','ship16','ship17','ship18','ship19']
+#dev_id = ['', 'ship11','ship12','ship13','ship14','ship15','ship21','ship22']
+device = []
+servers_dev = []
+w3s = []
+server_ips = []
+
+if os.path.exists('pwd_user.txt'):
+    with open('pwd_user.txt','r') as f:
+        pwd = f.read().replace('\n', '').replace('\r', '')
+        f.close()
+else:
+    pwd = input('please input the dev password: ')
+
+# 部署合约后得到的ABI
+with open('contract_ABI.json', 'r') as abi_f:
+    abi_a = json.load(abi_f)
+
+# 这个address是所部署合约的地址
+with open('contract.txt', 'r') as f:
+    authensc_addr= f.read().replace('\n', '').replace('\r', '')
+    f.close()
+
+# authensc_addr = "0x4670E1725991756820b8eE55B7b27D710B7770Fc"
+
+def gen_dev_id(prefix, gen_number):
+    for i in range(gen_number):
+
+        suffix = str(i).zfill(4)
+        dev_name = prefix + suffix
+
+        dev_id.append(dev_name)
+    print(dev_id)
+
+gen_dev_id("vehicle", 1005)
+
+def produce_complete_ip_web3(string_ip, hport):
+    for port_suffix in range(4):
+        server_ips.append(string_ip + str(hport+port_suffix))
+        # print(string_ip + str(hport+port_suffix))
+
+def init_servers_web3(ass_group, ass_leftind, ass_rightind):
+    # cssc
+    str_ip = "http://192.168.102.37:"
+    http_port = 8545
+    produce_complete_ip_web3(str_ip, http_port)
+
+    # krace
+    str_ip = "http://192.168.102.72:"
+    http_port = 8545
+    produce_complete_ip_web3(str_ip, http_port)
+
+    # yu_jumper
+    str_ip = "http://192.168.102.41:"
+    http_port = 8545
+    produce_complete_ip_web3(str_ip, http_port)
+
+    # datacon
+    str_ip = "http://192.168.102.43:"
+    http_port = 8545
+    produce_complete_ip_web3(str_ip, http_port)
+
+
+    nodeIDs = dev_id[ass_leftind:(ass_rightind + 1)]
+    print("nodeIDs: ", nodeIDs)
+    task_id = ass_group
+    authensc_list = []
+    for each_ip in server_ips:
+        dev_grp = []
+        dev_grp.clear()
+        w3s.append(Web3(Web3.HTTPProvider(each_ip)))
+        authensc_list.append(w3s[-1].eth.contract(address=Web3.toChecksumAddress(authensc_addr),
+                                   abi=abi_a))
+        # print("when init:", each_ip)
+        masteraddr = authensc_list[-1].functions.DomainInfo(ass_group).call()[1]
+        master_id = dev_id[w3s[-1].eth.accounts.index(masteraddr)]
+
+        dev_grp.append(
+            node_module.Node(Web3(Web3.HTTPProvider(each_ip)), authensc_list[-1], master_id,
+                             w3s[-1].eth.accounts[dev_id.index(master_id)]))
+        dev_grp[-1].node_idx = dev_id.index(master_id)
+
+        for nodeid in nodeIDs:
+            dev_grp.append(
+                node_module.Node(Web3(Web3.HTTPProvider(each_ip)), authensc_list[-1], nodeid,
+                                 w3s[-1].eth.accounts[dev_id.index(nodeid)]))
+            dev_grp[-1].node_idx = dev_id.index(nodeid)
+        servers_dev.append(dev_grp)
+
+if __name__ == "__main__":
+    ass_grp = "thefirsttest"
+    start_dev = 27
+    end_dev = 30  # included
+    init_servers_web3(ass_grp, start_dev, end_dev)

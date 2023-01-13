@@ -1,0 +1,6 @@
+struct OrderDistribute
+{
+    unsigned long index;
+    string message;
+    string remark;
+};

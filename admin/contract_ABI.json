@@ -1,0 +1,827 @@
+[
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "DomainID",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "DeviceID",
+				"type": "string"
+			},
+			{
+				"internalType": "address",
+				"name": "DeviceAddr",
+				"type": "address"
+			},
+			{
+				"internalType": "bytes",
+				"name": "MasterSig",
+				"type": "bytes"
+			},
+			{
+				"internalType": "bytes",
+				"name": "DeviceSig",
+				"type": "bytes"
+			}
+		],
+		"name": "AssociationPhase",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			},
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "DomainID",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "DeviceID",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "Data",
+				"type": "string"
+			},
+			{
+				"internalType": "bytes",
+				"name": "DeviceSig",
+				"type": "bytes"
+			}
+		],
+		"name": "AthenticationPhase",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			},
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "MasterAddr",
+				"type": "address"
+			},
+			{
+				"internalType": "string",
+				"name": "MasterID",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "DomainID",
+				"type": "string"
+			},
+			{
+				"internalType": "bytes",
+				"name": "MasterSig",
+				"type": "bytes"
+			}
+		],
+		"name": "BuildPhase",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			},
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "DomainID",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "DeviceID",
+				"type": "string"
+			},
+			{
+				"internalType": "address",
+				"name": "DeviceAddr",
+				"type": "address"
+			},
+			{
+				"internalType": "bytes",
+				"name": "MasterSig",
+				"type": "bytes"
+			},
+			{
+				"internalType": "bytes",
+				"name": "DeviceSig",
+				"type": "bytes"
+			}
+		],
+		"name": "DetouchPhase",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			},
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "DomainID",
+				"type": "string"
+			}
+		],
+		"name": "election_phase",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "DomainID",
+				"type": "string"
+			}
+		],
+		"name": "leader_broadcast",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "ResetAll",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "int256",
+				"name": "computing",
+				"type": "int256"
+			},
+			{
+				"internalType": "int256",
+				"name": "battery",
+				"type": "int256"
+			},
+			{
+				"internalType": "int256",
+				"name": "communication",
+				"type": "int256"
+			},
+			{
+				"internalType": "string",
+				"name": "lgt",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "ltt",
+				"type": "string"
+			}
+		],
+		"name": "update_heartbeat",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "DomainID",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "DeviceID",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "tarlgt",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "tarltt",
+				"type": "string"
+			}
+		],
+		"name": "update_target",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "DevAddr",
+				"type": "address"
+			},
+			{
+				"internalType": "string",
+				"name": "data",
+				"type": "string"
+			}
+		],
+		"name": "can_iterate",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "DomainID",
+				"type": "string"
+			}
+		],
+		"name": "DomainInfo",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			},
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "DomainID",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "DeviceID",
+				"type": "string"
+			},
+			{
+				"internalType": "address",
+				"name": "DeviceAddr",
+				"type": "address"
+			},
+			{
+				"internalType": "bytes",
+				"name": "MasterSig",
+				"type": "bytes"
+			}
+		],
+		"name": "GetAssociationHash",
+		"outputs": [
+			{
+				"internalType": "bytes32",
+				"name": "",
+				"type": "bytes32"
+			}
+		],
+		"stateMutability": "pure",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "DomainID",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "DeviceID",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "Data",
+				"type": "string"
+			}
+		],
+		"name": "GetAthenticationHash",
+		"outputs": [
+			{
+				"internalType": "bytes32",
+				"name": "",
+				"type": "bytes32"
+			}
+		],
+		"stateMutability": "pure",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "MasterAddr",
+				"type": "address"
+			},
+			{
+				"internalType": "string",
+				"name": "DomainID",
+				"type": "string"
+			}
+		],
+		"name": "GetBuildHash",
+		"outputs": [
+			{
+				"internalType": "bytes32",
+				"name": "",
+				"type": "bytes32"
+			}
+		],
+		"stateMutability": "pure",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "DomainID",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "DeviceID",
+				"type": "string"
+			},
+			{
+				"internalType": "address",
+				"name": "DeviceAddr",
+				"type": "address"
+			}
+		],
+		"name": "GetCertHash",
+		"outputs": [
+			{
+				"internalType": "bytes32",
+				"name": "",
+				"type": "bytes32"
+			}
+		],
+		"stateMutability": "pure",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "DevAddr",
+				"type": "address"
+			},
+			{
+				"internalType": "string",
+				"name": "data",
+				"type": "string"
+			}
+		],
+		"name": "iterate_next",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "DevAddr",
+				"type": "address"
+			}
+		],
+		"name": "iterate_start",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "DomainID",
+				"type": "string"
+			}
+		],
+		"name": "LenDomainInfoDevice",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "DomainID",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "DeviceID",
+				"type": "string"
+			}
+		],
+		"name": "LenDomainInfoDeviceData",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "MasterAddr",
+				"type": "address"
+			}
+		],
+		"name": "LenMasterDomain",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "MasterAddr",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "i",
+				"type": "uint256"
+			}
+		],
+		"name": "MasterDomain",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "owner",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "DomainID",
+				"type": "string"
+			}
+		],
+		"name": "query_DN",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "DomainID",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "DevID",
+				"type": "string"
+			}
+		],
+		"name": "query_lgtlttwh",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			},
+			{
+				"internalType": "int256",
+				"name": "",
+				"type": "int256"
+			},
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "DomainID",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "id",
+				"type": "string"
+			}
+		],
+		"name": "quethr",
+		"outputs": [
+			{
+				"internalType": "int256",
+				"name": "",
+				"type": "int256"
+			},
+			{
+				"internalType": "int256",
+				"name": "",
+				"type": "int256"
+			},
+			{
+				"internalType": "int256",
+				"name": "",
+				"type": "int256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "DomainID",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "DeviceID",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "i",
+				"type": "uint256"
+			}
+		],
+		"name": "ViewData",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			},
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "DomainID",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "DeviceID",
+				"type": "string"
+			}
+		],
+		"name": "ViewDeviceByID",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			},
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			},
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			},
+			{
+				"internalType": "int8",
+				"name": "",
+				"type": "int8"
+			},
+			{
+				"internalType": "int8",
+				"name": "",
+				"type": "int8"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "DomainID",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "i",
+				"type": "uint256"
+			}
+		],
+		"name": "ViewDeviceByIndex",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			},
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			},
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			},
+			{
+				"internalType": "int8",
+				"name": "",
+				"type": "int8"
+			},
+			{
+				"internalType": "int8",
+				"name": "",
+				"type": "int8"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
