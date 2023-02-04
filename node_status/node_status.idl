@@ -1,0 +1,7 @@
+struct OrderDistribute
+{
+    unsigned long index;
+    string message;
+    string remark;
+    psutil._pslinux.svmem mem;
+};
