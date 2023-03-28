@@ -1,0 +1,1 @@
+geth --datadir ./devnode3 --http.port=8547  --port=30305 > geth_devnode3.log 2>&1 --syncmode full --identity "cssc" --ipcdisable --allow-insecure-unlock --http --http.corsdomain="*" --http.api web3,eth,debug,personal,net,txpool,admin,miner --http.addr=0.0.0.0 --vmdebug --nodiscover &

@@ -1,0 +1,1 @@
+geth --datadir ./exnode02 --http.port=8546 --authrpc.port=9546  --port=30304 2>>exnode02.log --syncmode full --identity "iovexperiment" --ipcdisable --allow-insecure-unlock --http --http.corsdomain="*" --http.api web3,eth,debug,personal,net,txpool,admin,miner --http.addr=0.0.0.0 --vmdebug --nodiscover
